@@ -1,0 +1,1 @@
+Try this on git bash: git config --local core.autocrlf true
