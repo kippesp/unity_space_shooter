@@ -22,10 +22,16 @@ public class PlayerController : MonoBehaviour {
 
     private float nextFire;
 
+    public Camera topDownCamera;
+    public Camera firstPersonCamera;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
+
+        topDownCamera.enabled = true;
+        firstPersonCamera.enabled = false;
     }
 
     private void Update()
@@ -36,6 +42,14 @@ public class PlayerController : MonoBehaviour {
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             audioSource.Play();
         }
+
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            firstPersonCamera.enabled = topDownCamera.enabled;
+            topDownCamera.enabled = !topDownCamera.enabled;
+        }
+
+        firstPersonCamera.transform.rotation = Quaternion.identity;
     }
 
     void FixedUpdate()
