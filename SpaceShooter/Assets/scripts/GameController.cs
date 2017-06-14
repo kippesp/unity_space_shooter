@@ -15,10 +15,14 @@ public class GameController : MonoBehaviour {
     public GUIText scoreText;
     public GUIText restartText;
     public GUIText gameOverText;
+    public GUIText wavesClearedText;
 
     private bool gameOver;
     private bool restartGame;
     private int score;
+
+    const string WAVES_CLEARED_LABEL = "Waves Cleared";
+    private int wavesCleared = 0;
 
     private void Start()
     {
@@ -26,6 +30,7 @@ public class GameController : MonoBehaviour {
         restartGame = false;
         restartText.text = "";
         gameOverText.text = "";
+        wavesClearedText.text = WAVES_CLEARED_LABEL + ": 0";
         score = 0;
         UpdateScore();
         StartCoroutine(SpawnWaves());
@@ -65,6 +70,11 @@ public class GameController : MonoBehaviour {
             {
                 restartText.text = "Press 'R' for Restart";
                 restartGame = true;
+            }
+            else
+            {
+                wavesCleared++;
+                wavesClearedText.text = WAVES_CLEARED_LABEL + ": " + wavesCleared;
             }
         }
     }
