@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnBabyAsteroids : MonoBehaviour {
-    public GameObject smallHazard;
+    public GameObject babyAsteroidOne;
+    public GameObject babyAsteroidTwo;
 
     private Rigidbody rb;
 
@@ -13,8 +14,17 @@ public class SpawnBabyAsteroids : MonoBehaviour {
     }
 
 	void OnDestroy() {
-        Vector3 spawnPosition = new Vector3(rb.position.x, rb.position.y, rb.position.z);
+        CapsuleCollider capsuleCollider = babyAsteroidOne.GetComponent<CapsuleCollider>();
 
-        Instantiate(smallHazard, spawnPosition, Quaternion.identity);
+        Vector3 spawnPositionOne = new Vector3(rb.position.x - capsuleCollider.radius, rb.position.y, rb.position.z);
+        Vector3 spawnPositionTwo = new Vector3(rb.position.x + capsuleCollider.radius, rb.position.y, rb.position.z);
+
+        Instantiate(babyAsteroidOne, spawnPositionOne, Quaternion.identity);
+        Mover babyAsteroidOneMover = babyAsteroidOne.GetComponent<Mover>();
+        babyAsteroidOneMover.angleDegrees = 10;
+
+        Instantiate(babyAsteroidTwo, spawnPositionTwo, Quaternion.identity);
+        Mover babyAsteroidTwoMover = babyAsteroidTwo.GetComponent<Mover>();
+        babyAsteroidTwoMover.angleDegrees = -10;
 	}
 }

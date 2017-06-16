@@ -7,13 +7,20 @@ public class Mover : MonoBehaviour {
     private Rigidbody rb;
 
     public float speed;
-    public float angle;
+    public float angleDegrees;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
 
-        rb.velocity = transform.forward * speed;
+        float angleRadians = Mathf.Deg2Rad * angleDegrees;
+
+        rb.velocity = new Vector3(
+            -speed * Mathf.Sin(angleRadians),
+            0,
+            speed * Mathf.Cos(angleRadians));
+//        rb.velocity = new Vector3(1, 0, 1.7f).normalized * speed;
+//l        transform.Rotate(transform.forward * speed;
         // ??? angle
     }
 }

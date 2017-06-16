@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2044f22d4cc7d0d4ebd829ec5214e3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazard: {fileID: 1466140172920658, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
+  hazard: {fileID: 1276464255238716, guid: 5560b882d2d72e14abbf4daa18d62c9a, type: 2}
   spawnValues: {x: 6, y: 1, z: 19}
   hazardCount: 10
   spawnWait: 0.5
@@ -604,57 +604,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &556867192
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4336354576070608, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4336354576070608, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 4336354576070608, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 19.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 4336354576070608, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4336354576070608, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4336354576070608, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4336354576070608, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4336354576070608, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1466140172920658, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-      propertyPath: m_Name
-      value: MommaAsteroid
-      objectReference: {fileID: 0}
-    - target: {fileID: 136822321929432314, guid: 33c008beb8893c94e8cde867a56e44cd,
-        type: 2}
-      propertyPath: m_Height
-      value: 1.67
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &724406920
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,24 +656,6 @@ Transform:
   m_Father: {fileID: 1055433143}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &883303978 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1466140172920658, guid: 33c008beb8893c94e8cde867a56e44cd,
-    type: 2}
-  m_PrefabInternal: {fileID: 556867192}
---- !u!114 &883303985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 883303978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c625d76a2e9a794b93f6bb67a39bc1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  smallHazard: {fileID: 1253054713558232, guid: 7ca09552015849d489d7083363842962,
-    type: 2}
 --- !u!1 &1047950811
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1055433143
 Transform:
   m_ObjectHideFlags: 0
