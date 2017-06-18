@@ -95,4 +95,14 @@ public class GameController : MonoBehaviour {
         gameOverText.text = "Game Over";
         gameOver = true;
     }
+
+    public bool isGameOver()
+    {
+        return gameOver;
+    }
+
+    public void OnDestroy()
+    {
+        gameOver = true;
+    }
 }
