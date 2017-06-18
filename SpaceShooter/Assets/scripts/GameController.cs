@@ -45,7 +45,11 @@ public class GameController : MonoBehaviour {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+    }
 
+    public int getWavesCleared()
+    {
+        return wavesCleared;
     }
 
     IEnumerator SpawnWaves()
@@ -54,7 +58,7 @@ public class GameController : MonoBehaviour {
 
         while(!gameOver)
         {
-            for (int i = 0; i < hazardCount; i++)
+            for (int i = 0; i < hazardCount + wavesCleared; i++)
             {
                 Vector3 spawnPosition = new Vector3(
                     Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, spawnValues.z);

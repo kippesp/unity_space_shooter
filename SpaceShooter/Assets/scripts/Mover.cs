@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour {
 
     private Rigidbody rb;
+    private GameController gc;
 
     public float speed;
 
@@ -12,6 +13,9 @@ public class Mover : MonoBehaviour {
     {
         rb = GetComponent<Rigidbody>();
 
-        rb.velocity = transform.forward * speed;
+        GameObject go = GameObject.FindWithTag("GameController");
+        gc = go.GetComponent<GameController>();
+
+        rb.velocity = transform.forward * (speed - gc.getWavesCleared());
     }
 }
