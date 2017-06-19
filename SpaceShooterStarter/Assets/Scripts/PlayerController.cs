@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// The boundary class is serializable in order to privide access
+// to the public floats from within the Unity inspector.
 [System.Serializable]
 public class Boundary
 {
