@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour {
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        rb.velocity = movement;
+        rb.velocity = movement * speed;
 
         // Check we don't leave the viewing area
         if ((boundary.xMin != boundary.xMax) && (boundary.zMin != boundary.zMax))
