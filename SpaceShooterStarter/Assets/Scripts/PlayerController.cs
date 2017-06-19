@@ -22,16 +22,10 @@ public class PlayerController : MonoBehaviour {
 
     private float nextFire;
 
-    public Camera topDownCamera;
-    public Camera firstPersonCamera;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         audioSource = GetComponent<AudioSource>();
-
-        topDownCamera.enabled = true;
-        firstPersonCamera.enabled = false;
     }
 
     private void Update()
@@ -42,14 +36,6 @@ public class PlayerController : MonoBehaviour {
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
             audioSource.Play();
         }
-
-        if (Input.GetKeyDown(KeyCode.Tab))
-        {
-            firstPersonCamera.enabled = topDownCamera.enabled;
-            topDownCamera.enabled = !topDownCamera.enabled;
-        }
-
-        firstPersonCamera.transform.rotation = Quaternion.identity;
     }
 
     void FixedUpdate()
@@ -57,12 +43,18 @@ public class PlayerController : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        rb.velocity = new Vector3(moveHorizontal, 0.0f, moveVertical) * speed;
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        rb.position = new Vector3(
-            Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
-            rb.position.y,
-            Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax));
+        rb.velocity = movement;
+
+        // Check we don't leave the viewing area
+        if ((boundary.xMin != boundary.xMax) && (boundary.zMin != boundary.zMax))
+        {
+            rb.position = new Vector3(
+                Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+                rb.position.y,
+                Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax));
+        }
 
         rb.rotation = Quaternion.Euler(0.0f, 0.0f, rb.velocity.x * -tilt);
     }
