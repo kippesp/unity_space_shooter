@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 571
     width: 947
     height: 604
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -67,8 +67,8 @@ MonoBehaviour:
     y: 0
     width: 947
     height: 1175
-  m_MinSize: {x: 202, y: 442}
-  m_MaxSize: {x: 4002, y: 8042}
+  m_MinSize: {x: 202, y: 421}
+  m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
   controlID: 10
 --- !u!114 &4
@@ -227,8 +227,8 @@ MonoBehaviour:
     y: 0
     width: 366
     height: 575
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -252,8 +252,8 @@ MonoBehaviour:
     y: 0
     width: 470
     height: 1175
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -312,9 +312,9 @@ MonoBehaviour:
     height: 554
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 86250000
+    m_SelectedIDs: 2a270000
     m_LastClickedID: 0
-    m_ExpandedIDs: befbffff00000000
+    m_ExpandedIDs: c0fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -407,7 +407,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_Complete-Game/Scenes
+    - Assets/FinalScripts
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders:
@@ -419,7 +419,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c4240000
     m_LastClickedID: 9412
-    m_ExpandedIDs: 00000000da240000562500005a250000902500009a250000da2500001a260000e0260000e2260000e4260000
+    m_ExpandedIDs: 00000000d4240000502500001a260000e8260000ea260000ec260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -447,7 +447,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da240000562500001a260000e0260000e2260000e4260000
+    m_ExpandedIDs: 00000000d424000050250000e8260000ea260000ec260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -463,7 +463,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 4}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.26434225, y: -0.050606176, z: 0.013890296, w: 0.963007}
     speed: 2
-    m_Value: {x: 0.26434052, y: -0.050605845, z: 0.013890205, w: 0.96300066}
+    m_Value: {x: -0.26434225, y: 0.05060618, z: -0.013890297, w: -0.96300703}
   m_Size:
     m_Target: 31.977896
     speed: 2
