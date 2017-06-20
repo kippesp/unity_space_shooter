@@ -37,7 +37,6 @@ public class PlayerController : MonoBehaviour {
         {
             nextFire = Time.time;   // TODO: Fixme
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-            // audioSource.Play();
         }
     }
 
