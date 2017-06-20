@@ -39,8 +39,6 @@ Getting Started
     - Delete directional light
     - Remove the skybox lighting material
         - Window --> Lighting --> Skybox Material (Environment) ==> NONE
-    - Set background color to black
-        - Main Camera - Background ==> BLACK
 
 Add player ship
     - Drag Models -> vehicle_playerShip into the scene
@@ -79,6 +77,8 @@ Camera
         - move the camera.  Choose z --> 8
 
 Lighting
+    - Set background color to black
+        - Main Camera - Background ==> BLACK
     - Light the ship by adding directional light
         - Create --> Light --> Directional Light
     - Rename to Main Light
@@ -121,6 +121,8 @@ Add a background
     - The background can be anywhere underneath the ship.  Let's choose 10.
     - Adjust the Z position of the background as well
 
+Add a starfield background
+
 Add movement
     - Associate the script PlayerController to the Player
     - Test and observe the ship is quite slow
@@ -130,6 +132,50 @@ Add movement
         - Use this value once the game has been stopped
     - What about moving outside the window?
         X: -6, 6    Z: -1, 13
+
+Add shots for the player
+    - Turn off the player
+    - Within in Materials is the bolt we will fire
+        - fx_bolt_orage
+    - Drag this into the Hierarchy
+    - Optionally change to cyan (from Texture)
+    - We need the bolt to interact with other objects and move within the environment
+    - Find the bolt in the Prefabs area
+    - The bolt doesn't distroy the asteroids
+        - Select the bolt
+        - Add a capsule collider under the phyics menu
+            - The orientation is wrong.  We need the direction along the Z axis
+            - Adjust the radius and height (use the top-down to help):
+                - R=.03 H=.66
+        - Finally we need to make it a trigger
+    - A script is provided in the Scripts directory for the bolt, called Mover
+        - Open this script for editing
+        - What do we want the bolt to do?
+            - Move automatically
+            - Distroy anything it touches
+            - Go away after that
+            - Since we've added the rigid body component, it will have its own velocity
+                - All objects have a Transform.  Movement along the blue axis in Unity
+                  is the "forward" direction."
+                - Add the code:
+                    rigidbody.velocity = transform.forward * speed;
+            - We used a speed of 10 on the player.  So speed to 20 on the bolt.
+            - Play to test
+            - Delete the earlier prefab called Bolt
+            - Drag the new bolt into the Prefabs area
+            - Can drag the object into the scene during play, too
+
+Shooting the shots
+
+Adding a boundary
+
+Creating the asteroids
+
+Creating explosions
+
+Create a Game Controller
+
+Spawn Waves
 
 
 
