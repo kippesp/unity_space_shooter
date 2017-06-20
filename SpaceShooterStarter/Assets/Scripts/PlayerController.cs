@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// The boundary class is serializable in order to privide access
-// to the public floats from within the Unity inspector.
 [System.Serializable]
 public class Boundary
 {
@@ -14,7 +12,7 @@ public class PlayerController : MonoBehaviour {
     private Rigidbody rb;
     private AudioSource audioSource;
 
-    // TODO: public float speed;
+    public float speed;
     public float tilt;
     public Boundary boundary;
 
@@ -34,9 +32,9 @@ public class PlayerController : MonoBehaviour {
     {
         if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
-            nextFire = Time.time + fireRate;
+            nextFire = Time.time;   // TODO: Fixme
             Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
-            audioSource.Play();
+            // audioSource.Play();
         }
     }
 
@@ -45,21 +43,12 @@ public class PlayerController : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        rb.velocity = new Vector3(moveHorizontal, 0.0f, moveVertical) * speed;
 
-        // TODO: Debug.Log("moveHorizontal: " + moveHorizontal);
-        // TODO: Debug.Log("moveVertical: " + moveVertical);
-
-        rb.velocity = movement;
-
-        // Check we don't leave the viewing area
-        if ((boundary.xMin != boundary.xMax) && (boundary.zMin != boundary.zMax))
-        {
-            rb.position = new Vector3(
-                Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
-                rb.position.y,
-                Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax));
-        }
+        rb.position = new Vector3(
+            Mathf.Clamp(rb.position.x, boundary.xMin, boundary.xMax),
+            rb.position.y,
+            Mathf.Clamp(rb.position.z, boundary.zMin, boundary.zMax));
 
         rb.rotation = Quaternion.Euler(0.0f, 0.0f, rb.velocity.x * -tilt);
     }
