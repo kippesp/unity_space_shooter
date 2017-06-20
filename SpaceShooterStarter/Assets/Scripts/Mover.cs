@@ -5,10 +5,13 @@ using UnityEngine;
 public class Mover : MonoBehaviour {
 
     private Rigidbody rb;
-    private GameController gc;
+
+    public float speed;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        rb.velocity = transform.forward * speed;
     }
 }
