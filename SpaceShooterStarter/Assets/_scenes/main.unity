@@ -3590,6 +3590,56 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 198988205774228884, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198988205774228884, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198988205774228884, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198988205774228884, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198988205774228884, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: randomSeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198880849294221386, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: InitialModule.startSizeY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198880849294221386, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: InitialModule.startSizeZ.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198880849294221386, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198880849294221386, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198880849294221386, guid: 075e7f12270202b49b1bf529d310c0fb,
+        type: 2}
+      propertyPath: randomSeed
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 075e7f12270202b49b1bf529d310c0fb, type: 2}
   m_IsPrefabParent: 0
