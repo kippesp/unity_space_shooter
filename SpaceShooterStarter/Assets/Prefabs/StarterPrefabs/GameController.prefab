@@ -134,11 +134,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 1466140172920658, guid: 33c008beb8893c94e8cde867a56e44cd, type: 2}
   spawnValues: {x: 6, y: 1, z: 19}
-  hazardCount: 10
-  spawnWait: 0.5
-  startWait: 1
-  waveWait: 4
-  scoreText: {fileID: 0}
-  restartText: {fileID: 0}
-  gameOverText: {fileID: 0}
-  wavesClearedText: {fileID: 0}
+  minWaitPerHazard: 0
+  maxWaitPerHazard: 0

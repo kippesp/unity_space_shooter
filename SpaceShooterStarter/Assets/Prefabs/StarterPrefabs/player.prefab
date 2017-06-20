@@ -418,8 +418,6 @@ MonoBehaviour:
   shot: {fileID: 1718403086980220, guid: e6e7dcc3d7abf114ca4bb1fe38f5a8a8, type: 2}
   shotSpawn: {fileID: 4875633137386256}
   fireRate: 0.25
-  topDownCamera: {fileID: 0}
-  firstPersonCamera: {fileID: 20275092221319586}
 --- !u!124 &124315248709361012
 Behaviour:
   m_ObjectHideFlags: 1
