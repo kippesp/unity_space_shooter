@@ -139,7 +139,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
-  controlID: 21
+  controlID: 93
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -434,7 +434,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/_scenes
+    - Assets/Prefabs
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders:
@@ -446,7 +446,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: c4240000
     m_LastClickedID: 9412
-    m_ExpandedIDs: 00000000d22400003a25000058250000962500009e2500001e260000ce270000d0270000d2270000d4270000d6270000
+    m_ExpandedIDs: 00000000d22400003a2500005825000096250000ce270000d0270000d2270000d4270000d6270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -474,7 +474,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d22400003a25000058250000962500009e2500001e260000ce270000d0270000d2270000d4270000d6270000
+    m_ExpandedIDs: 00000000d22400003a25000096250000ce270000d0270000d2270000d4270000d6270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
