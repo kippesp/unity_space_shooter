@@ -24,7 +24,10 @@ public class PlayerController : MonoBehaviour {
 
     private void Start()
     {
+        // Obtain the Rigidbody component for physics manipulations
         rb = GetComponent<Rigidbody>();
+
+        // Obtain the audioSource (fire sound) to play when appropriate
         audioSource = GetComponent<AudioSource>();
     }
 
